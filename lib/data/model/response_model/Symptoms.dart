@@ -4,7 +4,9 @@ class Symptoms {
   Symptoms({
       this.id, 
       this.title, 
-      this.subSymptom,});
+      this.subSymptom,
+    this.selectedSubSymptom,
+  });
 
   Symptoms.fromJson(dynamic json) {
     id = json['id'];
@@ -19,6 +21,7 @@ class Symptoms {
   int id;
   String title;
   List<SubSymptom> subSymptom;
+  SubSymptom selectedSubSymptom;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};

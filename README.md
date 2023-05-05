@@ -1,5 +1,5 @@
 # soft_bd_skill_test
-## Please click on bell icon or send icon for page no two.
+# Please click on bell icon or send icon for page no two.
 A new Flutter project.
 
 ## Getting Started

@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:soft_bd_skill_test/custom_pop_up.dart';
 import 'package:soft_bd_skill_test/utill/color_resources.dart';
 import 'package:soft_bd_skill_test/view/page_one.dart';
 import 'package:soft_bd_skill_test/view_model/bottom_navigationbar_viewmodel.dart';

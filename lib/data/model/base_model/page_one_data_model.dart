@@ -4,7 +4,7 @@ class PageOneDataModel{
 
   static List<CategoryModel> categoryList =[
     CategoryModel("Cycle", "assets/Icon.png"),
-    CategoryModel("My Health", "assets/Icon.png"),
+    CategoryModel("My Health", "assets/Group 3178.png"),
     CategoryModel("Shop", "assets/Icon_basket.png"),];
 
   static List<CategoryModel> categoryList2 =[

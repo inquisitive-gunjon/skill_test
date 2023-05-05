@@ -12,7 +12,7 @@ class ColorResources {
   //FAFAFA body color,
   //8c8385 text color
 
-  static const Color primaryColor=Color(0xffF05a76);
+  static const Color primaryColor=Color(0xffF8556F);
   static const Color bodyColor=Color(0xffFAFAFA);
   static const Color fontColor=Color(0xff8c8385);
 

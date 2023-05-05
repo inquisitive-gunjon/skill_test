@@ -9,6 +9,7 @@ import 'package:soft_bd_skill_test/data/datasource/remote/dio/logging_intercepto
 import 'package:soft_bd_skill_test/data/repository/page_two_repo.dart';
 import 'package:soft_bd_skill_test/utill/app_constants.dart';
 import 'package:soft_bd_skill_test/view_model/bottom_navigationbar_viewmodel.dart';
+import 'package:soft_bd_skill_test/view_model/page_one_view_model.dart';
 import 'package:soft_bd_skill_test/view_model/page_two_view_model.dart';
 
 final sl = GetIt.instance;
@@ -25,6 +26,7 @@ Future<void> init() async {
   // Provider
   sl.registerFactory(() => BottomNavigationBarViewModel());
   sl.registerFactory(() => PageTwoViewModel(pageTwoRepo:sl()));
+  sl.registerFactory(() => PageOneViewModel());
 
 
   // External

@@ -62,11 +62,18 @@ class BottomNavigationBarViewModel with ChangeNotifier {
   Widget bottomNavigationBar(BuildContext context,bool isLanding) {
     return BottomAppBar(
 
-        shape: CircularNotchedRectangle(),
-        clipBehavior: Clip.antiAlias,
+        // shape: CircularNotchedRectangle(),
+        // clipBehavior: Clip.antiAlias,
         notchMargin: 4,
         child: BottomNavigationBar(
-
+          backgroundColor: Colors.purpleAccent,
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.red,
+          unselectedItemColor: Colors.white,
+          type: BottomNavigationBarType.shifting,
+          onTap: (index){
+            _onItemTapped(index,isLanding,context);
+          },
           items:  <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Image.asset("assets/Icon4.png",height: MediaQuery.of(context).size.width*(20/360),width: MediaQuery.of(context).size.width*(20/360),color: Colors.black,),
@@ -85,11 +92,6 @@ class BottomNavigationBarViewModel with ChangeNotifier {
               label: '',
             ),
           ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: ColorResources.primaryColor,
-          onTap: (index){
-            _onItemTapped(index,isLanding,context);
-          },
         ));
   }
 

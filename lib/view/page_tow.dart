@@ -35,9 +35,8 @@ class _PageTwoState extends State<PageTwo> {
 
   _load()async{
     Provider.of<PageTwoViewModel>(context,listen: false).loadCurrentDate();
-    final pageTwoViewModel=Provider.of<PageTwoViewModel>(context,listen: false);
-    pageTwoViewModel.getPageTwoData();
-    Provider.of<ViewAllSelectedViewModel>(context,listen: false).setSelectedPageTowData(pageTwoViewModel.pageTwoDataModel);
+    Provider.of<PageTwoViewModel>(context,listen: false).getPageTwoData();
+
   }
 
   @override
@@ -48,6 +47,9 @@ class _PageTwoState extends State<PageTwo> {
 
     return Consumer<PageTwoViewModel>(
       builder: (context,pageTwoViewModel,child) {
+        if(pageTwoViewModel!=null){
+          Provider.of<ViewAllSelectedViewModel>(context,listen: false).setSelectedPageTowData(pageTwoViewModel.copyPageTwoDataModel);
+        }
 
         return Scaffold(
           backgroundColor: ColorResources.bodyColor,

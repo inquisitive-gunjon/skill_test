@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-## Please click on bell icon or send icon for page no two.
+## Please click on bell icon or send icon of page_one for page no two.
 
 This project is a starting point for a Flutter application.
 

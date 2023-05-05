@@ -22,7 +22,7 @@ class _PageOneState extends State<PageOne> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
 
     return Consumer<BottomNavigationBarViewModel>(
       builder: (context,bottomNavigationBarViewModel,child) {
@@ -41,8 +41,8 @@ class _PageOneState extends State<PageOne> {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>PageTwo()));
                   },
                   child: SizedBox(
-                    height: size * (18 / 360),
-                    width: size * (18 / 360),
+                    height: width * (18 / 360),
+                    width: width * (18 / 360),
                     child: Image(
                       image: AssetImage("assets/Icon-1.png"),
                     ),
@@ -62,7 +62,7 @@ class _PageOneState extends State<PageOne> {
                   shrinkWrap: true,
                   children: [
                     Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: size*(8/360)),
+                      padding:  EdgeInsets.symmetric(horizontal: width*(8/360)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: PageOneDataModel.categoryList.map((e) => GestureDetector(
@@ -72,8 +72,8 @@ class _PageOneState extends State<PageOne> {
                           },
 
                           child: Container(
-                            height: size*.3,
-                            width: size*.3,
+                            height: width*.3,
+                            width: width*.3,
                             decoration: BoxDecoration(
                                 color: pageOneViewModel.selectedCategory==e.categoryName?ColorResources.primaryColor:Colors.white,
                                 borderRadius: BorderRadius.circular(10),
@@ -88,14 +88,14 @@ class _PageOneState extends State<PageOne> {
                               ]
                             ),
                             child: Padding(
-                              padding: EdgeInsets.symmetric(vertical: size*(25/360)),
+                              padding: EdgeInsets.symmetric(vertical: width*(25/360)),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   SizedBox(
-                                      height: size*(25/360),
-                                      width: size*(25/360),
+                                      height: width*(25/360),
+                                      width: width*(25/360),
                                       child: Image(
                                         image: AssetImage("${e.categoryIcon}"),
                                         color: pageOneViewModel.selectedCategory==e.categoryName?Colors.white:ColorResources.primaryColor,
@@ -131,13 +131,13 @@ class _PageOneState extends State<PageOne> {
                     // )
 
                     SizedBox(
-                      height: size*(30/360),
+                      height: width*(30/360),
                     ),
                     Padding(
-                      padding:  EdgeInsets.symmetric(horizontal: size*(8/360)),
+                      padding:  EdgeInsets.symmetric(horizontal: width*(8/360)),
                       child: Container(
-                        height: size*(500/360),
-                        width: size,
+                        height: width*(500/360),
+                        width: width,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.white,
@@ -216,21 +216,21 @@ class _PageOneState extends State<PageOne> {
                     ),
 
                     SizedBox(
-                      height: size*(50/360),
+                      height: width*(50/360),
                     ),
                     Center(child: Text("Explore",style: TextStyle(fontWeight: FontWeight.w600),)),
                     SizedBox(
-                      height: size*(20/360),
+                      height: width*(20/360),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: size*(8/360)),
+                      padding: EdgeInsets.symmetric(horizontal: width*(8/360)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: PageOneDataModel.categoryList2.map((e) => Container(
-                          height: size*(80/360),
-                          width: size*(80/360),
+                          height: width*(80/360),
+                          width: width*(80/360),
                           child: Padding(
-                            padding: EdgeInsets.all(size*(5/360)),
+                            padding: EdgeInsets.all(width*(5/360)),
                             child: Column(
                               children: [
                                 Expanded(
@@ -245,20 +245,20 @@ class _PageOneState extends State<PageOne> {
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
                                           Image(
-                                            height: size*(15/360),
-                                            width: size*(15/360),
+                                            height: width*(15/360),
+                                            width: width*(15/360),
                                             image: AssetImage(e.categoryIcon),
                                           ),
                                         ],
                                       ),
                                     )),
                                 SizedBox(
-                                  height: size * (8 / 360),
+                                  height: width * (8 / 360),
                                   width: MediaQuery.of(context).size.width,
                                   child: Center(
                                     child: Text(e.categoryName,
                                       style: TextStyle(
-                                        fontSize: size * (7 / 360),
+                                        fontSize: width * (7 / 360),
                                       ),
                                     ),
                                   ),
@@ -273,8 +273,8 @@ class _PageOneState extends State<PageOne> {
                       ),
                     ),
                     SizedBox(
-                      height: size * (200 / 360),
-                      width: size,
+                      height: width * (200 / 360),
+                      width: width,
                       child: CarouselSlider.builder(
                         options: CarouselOptions(
                           viewportFraction: 1,
@@ -312,14 +312,14 @@ class _PageOneState extends State<PageOne> {
                     ),
 
 
-                    SizedBox(height: size * (8 / 360),),
+                    SizedBox(height: width * (8 / 360),),
 
 
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: size*(8/360)),
+                      padding: EdgeInsets.symmetric(horizontal: width*(8/360)),
                       child: Container(
-                        padding: EdgeInsets.only(left: size*(10/360), right: size*(10/360), top: size*(10/360)),
-                        height: size * (180 / 360),
+                        padding: EdgeInsets.only(left: width*(10/360), right: width*(10/360), top: width*(10/360)),
+                        height: width * (180 / 360),
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
@@ -340,12 +340,12 @@ class _PageOneState extends State<PageOne> {
                               children: [
                                 Text("Demo APP",
                                     style: TextStyle(
-                                        fontSize: size * (Dimensions.FONT_SIZE_LARGE / 360),
+                                        fontSize: width * (Dimensions.FONT_SIZE_LARGE / 360),
                                         color: Colors.purpleAccent.shade400)),
-                                SizedBox(height: size * (10 / 360),),
+                                SizedBox(height: width * (10 / 360),),
                                 Text("In this example, we have set an image inside the CircleAvatar widget using the backgroundImage property. The image is geeksforgeeks logo whose address is provided inside the NetworkImage’s argument. And at last, we have assigned 100 as value to the radius of the CircleAvatar.",
                                     style: TextStyle(
-                                        fontSize: size *
+                                        fontSize: width *
                                             (Dimensions.FONT_SIZE_EXTRA_SMALL / 360),
                                         color: ColorResources.fontColor))
                               ],
@@ -353,8 +353,8 @@ class _PageOneState extends State<PageOne> {
                             Align(
                               alignment: Alignment.bottomRight,
                               child: Image(
-                                height: size*(90/360),
-                                width: size*(140/360),
+                                height: width*(90/360),
+                                width: width*(140/360),
                                 fit: BoxFit.fill,
                                 image: AssetImage("assets/Group 2131.png"),
                               ),
@@ -365,27 +365,27 @@ class _PageOneState extends State<PageOne> {
                     ),
 
                     SizedBox(
-                      height: size * (30 / 360),
+                      height: width * (30 / 360),
                     ),
                     Center(
                         child: Text("Unlock Premium",
                             style: TextStyle(
-                                fontSize: size * (Dimensions.FONT_SIZE_LARGE / 360),
+                                fontSize: width * (Dimensions.FONT_SIZE_LARGE / 360),
                                 color: ColorResources.primaryColor,
                                 fontWeight: FontWeight.w600))),
                     SizedBox(
-                      height: size * (30 / 360),
+                      height: width * (30 / 360),
                     ),
                     Container(
-                      height: size * .4,
-                      width: size,
-                      padding: EdgeInsets.symmetric(horizontal: size * (20 / 360)),
+                      height: width * .4,
+                      width: width,
+                      padding: EdgeInsets.symmetric(horizontal: width * (20 / 360)),
                       child: Row(
                         children: [
                           Expanded(
                               child: Container(
                             // width: size,
-                            padding: EdgeInsets.symmetric(horizontal: size * (25 / 360),vertical: size*(40/360)),
+                            padding: EdgeInsets.symmetric(horizontal: width * (25 / 360),vertical: width*(40/360)),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: ColorResources.primaryColor,
@@ -403,7 +403,7 @@ class _PageOneState extends State<PageOne> {
                                 Text(
                                   "30-Day Free Trial",
                                   style: TextStyle(
-                                      fontSize: size*(Dimensions.FONT_SIZE_SMALL/360),
+                                      fontSize: width*(Dimensions.FONT_SIZE_SMALL/360),
                                       color: Colors.white,
                                       fontWeight: FontWeight.w600),
                                 ),
@@ -417,12 +417,12 @@ class _PageOneState extends State<PageOne> {
                             ),
                           )),
                           SizedBox(
-                            width: size * (10 / 360),
+                            width: width * (10 / 360),
                           ),
                           Expanded(
                               child: Container(
-                                height: size,
-                            width: size,
+                                height: width,
+                            width: width,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(15),
                                 color: Colors.white,
@@ -447,13 +447,13 @@ class _PageOneState extends State<PageOne> {
                       ),
                     ),
 
-                    SizedBox(height: size*(30/360),),
+                    SizedBox(height: width*(30/360),),
 
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: size*(8/360)),
+                      padding: EdgeInsets.symmetric(horizontal: width*(8/360)),
                       child: Container(
-                        padding: EdgeInsets.only(left: size*(15/360), right: size*(10/360), top: size*(15/360)),
-                        height: size * (180 / 360),
+                        padding: EdgeInsets.only(left: width*(15/360), right: width*(10/360), top: width*(15/360)),
+                        height: width * (180 / 360),
                         width: MediaQuery.of(context).size.width,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(15),
@@ -475,21 +475,21 @@ class _PageOneState extends State<PageOne> {
                                 Text("Add My Partner",
                                     style: TextStyle(
                                         fontSize:
-                                        size * (Dimensions.FONT_SIZE_LARGE / 360),
+                                        width * (Dimensions.FONT_SIZE_LARGE / 360),
                                         color: Colors.purpleAccent.shade200,
                                       fontWeight: FontWeight.w600
                                     ),
                                 ),
                                 SizedBox(
-                                  height: size * (10 / 360),
+                                  height: width * (10 / 360),
                                 ),
                               ],
                             ),
                             Align(
                               alignment: Alignment.bottomRight,
                               child: Image(
-                                height: size*(135/360),
-                                width: size*(240/360),
+                                height: width*(135/360),
+                                width: width*(240/360),
                                 fit: BoxFit.fill,
                                 image: AssetImage("assets/Group 3183.png"),
                               ),
@@ -499,7 +499,7 @@ class _PageOneState extends State<PageOne> {
                       ),
                     ),
                     SizedBox(
-                      height: 100,
+                      height: width*(30/360),
                     ),
                   ],
                 ),
